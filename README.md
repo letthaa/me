@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Sérgio Batista </title>
 </head>
 
 <body bgcolor="#99ccff">
