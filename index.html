@@ -21,67 +21,58 @@
 <br>
 </div>
 
-<div ng-app="">
+<div class="w3-half">
+<div class="w3-container">
+  
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'Objetivo')">Objetivo</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Linguagens')">Linguagens</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Software')">Software</button>
+  </div>
+  <div id="Objetivo" class="w3-container w3-border city">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+	Etiam aliquam euismod auctor. In lectus libero, 
+	ornare eu erat eu, congue iaculis augue. 
+	Nam ornare risus sed pretium ullamcorper. 
+	Praesent vehicula facilisis tortor quis blandit. 
+	Sed non nunc vel ipsum ultrices volutpat quis et tortor. 
+	In imperdiet felis nec augue aliquet, tempor auctor nunc consectetur. 
+	Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  </div>
+
+  <div id="Linguagens" class="w3-container w3-border city" style="display:none">
+    <h2> Linguagens </h2>
+	<ul>
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+	</ul>
+	
+  </div>
+
+  <div id="Software" class="w3-container w3-border city" style="display:none">
+    <h2>Software</h2>
+    <p>Eclipse, NetBeans, Android Studio</p>
+  </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
 
 
-
-
-<h2>Objetivo</h2>
-<p>Ser um bom programador</p>
-<table border="1">
-
-<tr>
-<td>Expectativa para a disciplina de Programação WEB</td>
-<td>	<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12"></td>
-</td>
-</tr>
-<tr>
-<td>Interesse por Programação WEB</td>
-<td>	<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12"></td>
-</td>
-</tr>
-<td>*n sei o que colocar aqui kk*</td>
-<td>	<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/71/71397.png" height="13" width="12"></td>
-</td>
-</tr>
-</table>
-
-<h2>Fluência em Idiomas Estrangeiros</h2>
-
-<table border="1">
-<tr>
-<td>Inglês</td>
-<td>	<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12"></td>
-</td>
-</tr>
-
-
-<tr>
-<td>Espanhol</td>
-<td>	<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/60/60765.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/71/71397.png" height="13" width="12">
-<img src="https://image.flaticon.com/icons/png/512/71/71397.png" height="13" width="12"></td>
-</td>
-</tr>
-</table>
 <br>
 <footer> Contato: (71) 98775-7959 | byazura@live.com </footer>
 
