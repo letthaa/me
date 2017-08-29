@@ -6,13 +6,13 @@
 <title> f*society </title>
 </head>
 
-<body bgcolor="#404040">
+<body bgcolor="#333333">
 
 <div align="center">
 <div class="w3-row w3-margin-top">
 <div class="w3-half">
 <div class="w3-card-4 test" style="width:92%;max-width:300px;">
-  <img src="http://devstickers.com/assets/img/pro/mow7.png" alt="Avatar" style="width:100%;opacity:0.90">
+  <img src="http://devstickers.com/assets/img/pro/mow7.png" alt="Avatar" style="width:100%;opaTab:0.90">
   <div class="w3-container">
   <h4 style="background:#595959"><b>Sérgio Batista</b></h4>    
   <p>Software Engineering Student</p>    
@@ -25,40 +25,57 @@
 <div class="w3-container">
   
   <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'Objetivo')">Objetivo</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Linguagens')">Linguagens</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Software')">Software</button>
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="openTab(event,'Objetivo')">Objetivo</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Linguagens')">Linguagens</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Software')">Software</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Avalie-Me')">Avalie-Me</button>
   </div>
-  <div id="Objetivo" class="w3-container w3-border city">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-	Etiam aliquam euismod auctor. In lectus libero, 
-	ornare eu erat eu, congue iaculis augue. 
-	Nam ornare risus sed pretium ullamcorper. 
-	Praesent vehicula facilisis tortor quis blandit. 
-	Sed non nunc vel ipsum ultrices volutpat quis et tortor. 
-	In imperdiet felis nec augue aliquet, tempor auctor nunc consectetur. 
-	Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  <div id="Objetivo" class="w3-container w3-border Tab">
+    <p>achieve something that makes the world better</p>
   </div>
 
-  <div id="Linguagens" class="w3-container w3-border city" style="display:none">
-    <h2> Linguagens </h2>
+  <div id="Linguagens" class="w3-container w3-border Tab" style="display:none">
+    <h2>Linguagens</h2>
+	<div align="left">
 	<ul>
 	<li>Java</li>
+	<li>SQL</li>
 	<li>C</li>
 	</ul>
-	
+	</div>
   </div>
 
-  <div id="Software" class="w3-container w3-border city" style="display:none">
+  <div id="Software" class="w3-container w3-border Tab" style="display:none">
     <h2>Software</h2>
-    <p>Eclipse, NetBeans, Android Studio</p>
+    <div align="left">
+	<ul>
+	<li>Eclipse</li>
+	<li>NetBeans</li>
+	<li>Android Studio</li>
+	</ul>
+	</div>
+  </div>
+  
+  <div id="Avalie-Me" class="w3-container w3-border Tab" style="display:none">
+    <div align="center">
+	<form>
+	Nome<br>
+	<input type="text" name="name"><br>
+	Comentário<br>
+	<input type="text" name="lastname">
+	<br>
+	<br>
+  <input type="submit" value="Submit">
+</form> 
+
+	</div>
   </div>
 </div>
 
 <script>
-function openCity(evt, cityName) {
+function openTab(evt, TabName) {
   var i, x, tablinks;
-  x = document.getElementsByClassName("city");
+  x = document.getElementsByClassName("Tab");
   for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
   }
@@ -66,7 +83,7 @@ function openCity(evt, cityName) {
   for (i = 0; i < x.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(TabName).style.display = "block";
   evt.currentTarget.className += " w3-red";
 }
 </script>
